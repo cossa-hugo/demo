@@ -17,6 +17,14 @@ public class User implements Serializable, UserDetails {
     private String username;
     private String password;
 
+    public Integer getUserId() {
+        return id;
+    }
+
+    public void setUserId(Integer id) {
+        this.id = id;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
@@ -24,12 +32,12 @@ public class User implements Serializable, UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @Override
